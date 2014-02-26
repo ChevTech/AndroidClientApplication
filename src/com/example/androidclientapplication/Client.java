@@ -16,7 +16,8 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.EditText;
-	 
+
+// Main Activity
 public class Client extends Activity {
 	private Socket socket;
 	private PrintWriter out;
