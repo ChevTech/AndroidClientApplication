@@ -1,46 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical">
 
-    <Button
-        android:id="@+id/leftButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/downButton"
-        android:onClick="buttonAction"
-        android:text="Left" />
+	<Button android:id="@+id/leftButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_centerVertical="true"
+		android:layout_toLeftOf="@+id/downButton" android:onClick="buttonAction"
+		android:text="Left" />
 
-    <Button
-        android:id="@+id/rightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/leftButton"
-        android:layout_alignBottom="@+id/leftButton"
-        android:layout_toRightOf="@+id/upButton"
-        android:onClick="buttonAction"
-        android:text="Right" />
+	<Button android:id="@+id/rightButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_alignBaseline="@+id/leftButton"
+		android:layout_alignBottom="@+id/leftButton" android:layout_toRightOf="@+id/upButton"
+		android:onClick="buttonAction" android:text="Right" />
 
-    <Button
-        android:id="@+id/downButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rightButton"
-        android:layout_marginTop="19dp"
-        android:layout_toLeftOf="@+id/rightButton"
-        android:onClick="buttonAction"
-        android:text="Reverse" />
+	<Button android:id="@+id/downButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/rightButton"
+		android:layout_marginTop="19dp" android:layout_toLeftOf="@+id/rightButton"
+		android:onClick="buttonAction" android:text="Reverse" />
 
-    <Button
-        android:id="@+id/upButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/rightButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
-        android:onClick="buttonAction"
-        android:text="Forward" />
+	<Button android:id="@+id/upButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_above="@+id/rightButton"
+		android:layout_centerHorizontal="true" android:layout_marginBottom="18dp"
+		android:onClick="buttonAction" android:text="Forward" />
 
 </RelativeLayout>

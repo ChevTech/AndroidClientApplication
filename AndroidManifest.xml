@@ -7,11 +7,10 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    
-    <uses-permission android:name="android.permission.INTERNET">
+
+    <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
-    
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
     </uses-permission>
 
     <application
@@ -22,6 +21,16 @@
         <activity
             android:name="com.example.androidclientapplication.Client"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				<action android:name="android.intent.action.ConnectActivity"/>
+            </intent-filter>
+        </activity>
+        
+        
+        <activity
+            android:name="com.example.androidclientapplication.ConnectActivity"
+            android:label="@string/title_activity_connect" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,32 +8,40 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ResourceBundle.Control;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 // Main Activity
 public class Client extends Activity {
 	private Socket socket;
 	private PrintWriter out;
-    private static final int SERVERPORT = 12355;
-    private static final String SERVER_IP = "10.32.95.167";
+    private static int SERVERPORT;
+    private static String SERVER_IP;
  
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);  
+        setContentView(R.layout.main);
+               
+        Intent intent = getIntent();
+        
+        SERVER_IP = intent.getStringExtra("ServerIP");
+        SERVERPORT = intent.getIntExtra("ServerPort", 0);
         
         new Thread(new ClientThread()).start();
        	}
- 
-    /* Called when the user clicks one of the four directional buttons */
     
+    /* Called when the user clicks one of the four directional buttons */    
 	public void buttonAction(View view) throws IOException {
 		Button upButton = (Button) findViewById(R.id.upButton);
 		Button leftButton = (Button) findViewById(R.id.leftButton);
