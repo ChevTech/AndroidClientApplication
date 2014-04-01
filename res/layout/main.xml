@@ -1,26 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent" android:layout_height="fill_parent"
-	android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ButtonActivity" >
 
-	<Button android:id="@+id/leftButton" android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:layout_centerVertical="true"
-		android:layout_toLeftOf="@+id/downButton" android:onClick="buttonAction"
-		android:text="Left" />
+    <Button
+        android:id="@+id/forwardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp"
+        android:text="forward"
+        android:onClick="buttonAction" />
 
-	<Button android:id="@+id/rightButton" android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:layout_alignBaseline="@+id/leftButton"
-		android:layout_alignBottom="@+id/leftButton" android:layout_toRightOf="@+id/upButton"
-		android:onClick="buttonAction" android:text="Right" />
+    <Button
+        android:id="@+id/reverseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/forwardButton"
+        android:layout_below="@+id/forwardButton"
+        android:layout_marginTop="100dp"
+        android:text="reverse"
+        android:onClick="buttonAction" />
 
-	<Button android:id="@+id/downButton" android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:layout_below="@+id/rightButton"
-		android:layout_marginTop="19dp" android:layout_toLeftOf="@+id/rightButton"
-		android:onClick="buttonAction" android:text="Reverse" />
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/reverseButton"
+        android:text="right"
+        android:onClick="buttonAction" />
 
-	<Button android:id="@+id/upButton" android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:layout_above="@+id/rightButton"
-		android:layout_centerHorizontal="true" android:layout_marginBottom="18dp"
-		android:onClick="buttonAction" android:text="Forward" />
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rightButton"
+        android:layout_alignBottom="@+id/rightButton"
+        android:layout_toLeftOf="@+id/reverseButton"
+        android:text="left"
+        android:onClick="buttonAction" />
+
+    <Button
+        android:id="@+id/disconnectButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/forwardButton"
+        android:text="Disconnect"
+        android:onClick="disconnectAction" />
 
 </RelativeLayout>
+    

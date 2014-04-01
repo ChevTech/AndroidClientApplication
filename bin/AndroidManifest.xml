@@ -20,7 +20,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.androidclientapplication.Client"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboard"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 				<action android:name="android.intent.action.ConnectActivity"/>
@@ -29,11 +31,10 @@
         
         
         <activity
-            android:name="com.example.androidclientapplication.ConnectActivity"
+            android:name="com.example.androidclientapplication.CarConnect"
             android:label="@string/title_activity_connect" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

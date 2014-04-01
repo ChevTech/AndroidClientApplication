@@ -7,29 +7,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ConnectActivity" >
+    tools:context=".CarConnect" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CarConnect"
+        android:textSize="50dp"
+        android:textStyle="italic"
+        android:gravity="center"
+         />
 
     <EditText
         android:id="@+id/IP"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPostalAddress"
-        android:text = "Server IP" />
+        android:inputType="textPostalAddress|number"
+        android:layout_marginTop="80dp"
+        android:hint="Server IP" />
 
     <EditText
         android:id="@+id/PORT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPostalAddress"
-        android:text = "Server Port" />
+        android:inputType="textPostalAddress|number"
+        android:hint="Server Port" />
 
     <Button
         android:id="@+id/connect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick = "connect"
-        android:text="Connect to Server" />
+        android:onClick="connect"
+        android:layout_marginTop="50dp"
+        android:text="Connect to Server"
+        android:layout_gravity="center" />
 
 </LinearLayout>
